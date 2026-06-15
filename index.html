@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Customer Satisfaction Survey</h1>
+        <p>Your feedback helps us improve</p>
+
+        <form id="surveyForm">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error" id="nameError"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+
+            <!-- Age Group -->
+            <div class="form-group">
+                <label>Age Group *</label>
+                <select id="age" required>
+                    <option value="">Select</option>
+                    <option>18-24</option>
+                    <option>25-34</option>
+                    <option>35-44</option>
+                    <option>45+</option>
+                </select>
+            </div>
+
+            <!-- Satisfaction Rating -->
+            <div class="form-group">
+                <label>How satisfied are you? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="satisfaction" value="Very Satisfied"> Very Satisfied</label>
+                    <label><input type="radio" name="satisfaction" value="Satisfied"> Satisfied</label>
+                    <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label>
+                    <label><input type="radio" name="satisfaction" value="Unsatisfied"> Unsatisfied</label>
+                </div>
+            </div>
+
+            <!-- Features liked (Checkboxes) -->
+            <div class="form-group">
+                <label>What features do you like? (Select all that apply)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="Ease of use"> Ease of use</label>
+                    <label><input type="checkbox" name="features" value="Price"> Price</label>
+                    <label><input type="checkbox" name="features" value="Customer support"> Customer support</label>
+                    <label><input type="checkbox" name="features" value="Speed"> Speed</label>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" rows="4" placeholder="Tell us more..."></textarea>
+            </div>
+
+            <button type="submit">✅ Submit Survey</button>
+            <div id="formMessage" class="message"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
